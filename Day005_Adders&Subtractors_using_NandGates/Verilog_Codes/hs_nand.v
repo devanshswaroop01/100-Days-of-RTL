@@ -1,11 +1,4 @@
-// Code your design here
-
-
-
-
-
 `timescale 1ns / 1ps
-
 module hs_nand(
 input a, b,
   output sout, cout );
@@ -16,3 +9,4 @@ input a, b,
     nand n3(sout, w[1], w[2]);
     nand n4(cout, w[2], w[2]);
 endmodule
+
