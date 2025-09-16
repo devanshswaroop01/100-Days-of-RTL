@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module fa_nand(
   input a, b, cin, 
   output sout, cout );
@@ -13,4 +13,5 @@ module fa_nand(
     nand n6(w[6], w[4], cin);
     nand n7(sout, w[5], w[6]);
     nand n8(cout, w[0], w[4]);
+
 endmodule
