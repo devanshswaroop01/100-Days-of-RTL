@@ -8,7 +8,6 @@ initial begin
     $dumpvars(0, adder4_tb);
     $monitor("Time=%0t | A=%b B=%b cin=%b => S=%b cout=%b", $time, A, B, cin, S, cout);
 
-    // Apply test vectors
     A = 4'b0100; B = 4'b1000; cin = 0; #10;
     A = 4'b0001; B = 4'b0010; cin = 0; #10;
     A = 4'b0101; B = 4'b0011; cin = 1; #10;
@@ -16,3 +15,4 @@ initial begin
 $finish;
   end 
 endmodule
+
