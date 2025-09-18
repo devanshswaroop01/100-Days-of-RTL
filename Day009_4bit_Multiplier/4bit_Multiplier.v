@@ -1,10 +1,10 @@
 //4 Bit Multiplier
 `timescale 1ns / 1ps
 module multiplier_4bit(a,b,out);   
-  input  [3:0] a, b;
-  output reg [7:0] out;
+  input signed   [3:0] a, b;
+  output reg signed  [7:0] out;
   
-    reg [7:0] t1, t2, t3, t4;
+    reg signed  [7:0] t1, t2, t3, t4;
 
     always @ (a, b) begin
         t1 = 0; t2 = 0; t3 = 0; t4 = 0;
@@ -16,3 +16,4 @@ module multiplier_4bit(a,b,out);
         out = t1 + t2 + t3 + t4;
     end
 endmodule
+
