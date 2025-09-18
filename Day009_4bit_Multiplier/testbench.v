@@ -1,5 +1,3 @@
-// Code your testbench here
-// or browse Examples
 //Testbench:
 `timescale 1ns / 1ps
 module multiplier_tb;
@@ -28,3 +26,4 @@ module multiplier_tb;
         $finish;
     end
 endmodule
+
