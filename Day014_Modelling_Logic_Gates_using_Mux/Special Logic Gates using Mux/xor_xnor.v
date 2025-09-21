@@ -1,4 +1,3 @@
-//Design Logic Gates using MUX  
 // 2-to-1 Multiplexer Module
 module mux_2_1(
     input [1:0] i,
@@ -15,3 +14,4 @@ mux_2_1 mbbar({1'b1, 1'b0}, b, bbar); // Select=0 => 1, Select=1 => 0 // NOT b =
 mux_2_1 mxor({b, bbar}, a, xor_out);   // XOR
 mux_2_1 mxnor({bbar, b}, a, xnor_out); // XNOR
 endmodule
+
