@@ -23,3 +23,4 @@ module demux_gates(
     demux_1_2 not_b (.sel(b), .i(1'b1), .y0(nb2), .y1(nb3)); 
     demux_1_2 and_inv (.sel(nb2), .i(nb0), .y0(nb4), .y1(nor_g));
 endmodule
+
