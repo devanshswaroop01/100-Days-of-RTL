@@ -1,13 +1,9 @@
 `timescale 1ns / 1ps
 module test_bench;
-  reg  [7:0] data;        // 8-bit binary input
-  wire [3:0] bit0, bit1, bit2; // BCD digits
-  wire [11:0] BCD;        // Combined BCD
-
- 
-  binary2bcd dut (
-    .data(data),  .bit0(bit0),
-    .bit1(bit1),  .bit2(bit2), .BCD(BCD) );
+  reg  [7:0] data;        
+  wire [3:0] bit0, bit1, bit2; 
+  wire [11:0] BCD;        
+  binary2bcd dut (.data(data),  .bit0(bit0),.bit1(bit1),  .bit2(bit2), .BCD(BCD) );
 
   initial begin
     $dumpfile("waveform.vcd");
@@ -17,9 +13,11 @@ module test_bench;
     data = 8'd0;   #10;
     data = 8'd5;   #10;
     data = 8'd9;   #10;
+    
     data = 8'd10;  #10;
     data = 8'd15;  #10;
     data = 8'd25;  #10;
+    
     data = 8'd47;  #10;
     data = 8'd99;  #10;
     data = 8'd123; #10;
@@ -28,3 +26,4 @@ module test_bench;
     #20 $finish;
   end
 endmodule 
+
