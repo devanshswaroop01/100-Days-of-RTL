@@ -1,21 +1,25 @@
 `timescale 1ns / 1ps
-
 module binary2bcd(
     input [7:0]data,
-    output reg [3:0] bit0,bit1,bit2,
+    output reg [3:0] bit0,bit1,bit2, // Ones, Tens, Hundreds place
     output reg[11:0] BCD  );
     integer n;
 
     always@(data)
     begin
+        // Initialize all BCD digits to 0
         bit0=0; bit1=0; bit2=0;
+        // Perform the double dabble (shift-add-3) algorithm
         for(n=0; n<8; n=n+1)
         begin
             if(bit0>4) bit0 = bit0+3;
             if(bit1>4) bit1 = bit1+3;
             if(bit2>4) bit2 = bit2+3;
+            // Shift left and bring in the next binary bit
             {bit2,bit1,bit0} = {bit2,bit1,bit0,data[7-n]};
         end
+         // Combine final digits into one 12-bit BCD number
         BCD= {bit2, bit1, bit0};
     end
 endmodule
+
