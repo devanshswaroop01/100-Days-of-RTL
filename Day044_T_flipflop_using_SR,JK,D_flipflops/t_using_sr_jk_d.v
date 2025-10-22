@@ -67,6 +67,6 @@ module T_using_SR_JK_D(
     JK_flipflop JK(T, T, clk, reset, Q_jk);
     
     assign w3= T ^ Q_d;
-    D_flipflop D(w3, clk, reset, Q_d);
+    D_flipflop D(clk, reset, w3, Q_d);
     
 endmodule
