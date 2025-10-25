@@ -1,5 +1,5 @@
-`timescale 1ns / 1ps
 // D Flip-Flop with Synchronous Reset
+`timescale 1ns / 1ps
 module D_flipflop(
     input d, clk, reset,
     output reg Q);
@@ -10,6 +10,7 @@ module D_flipflop(
             Q <= d;
     end
 endmodule
+
 
 // 4-bit Serial-In Serial-Out (SISO) Register
 module siso (
@@ -23,6 +24,7 @@ module siso (
     D_flipflop D1 (.d(q1),        .clk(clk), .reset(reset), .Q(q0));
     D_flipflop D0 (.d(q0),        .clk(clk), .reset(reset), .Q(serial_out));
 endmodule
+
 
 
 
