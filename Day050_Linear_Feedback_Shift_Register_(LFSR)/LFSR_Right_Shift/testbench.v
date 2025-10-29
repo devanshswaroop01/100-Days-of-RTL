@@ -1,6 +1,6 @@
 //Testbench:
 `timescale 1ns / 1ps
-module lfsr_right_tb;
+module test_bench;
 reg clk, reset;
 wire [7:0] lfsr_out;
 lfsr_right dut(clk, reset, lfsr_out);
@@ -13,8 +13,9 @@ end
 always #5 clk = ~clk;
 initial begin 
 $dumpfile("waveform.vcd");
-  $dumpvars(0, lfsr_right_tb);
+$dumpvars(0, test_bench);
 $monitor("\t\t clk: %b   lfsr_out: %b", clk, lfsr_out);
 #115 $finish;
 end 
 endmodule
+
