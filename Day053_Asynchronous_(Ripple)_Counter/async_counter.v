@@ -22,7 +22,7 @@ module t_ff (
 d_ff dff_inst ( .clk(clk), .reset(reset), .d(d), .q(q));
 endmodule
 
-//Asyncronous Counter Module
+//Asyncronous Down Counter Module
 module async_ripple (
     input clk, reset,
     output [3:0] q );
@@ -39,3 +39,4 @@ t_ff tff1 (.clk(q[0]), .reset(reset), .t(1'b1), .q(q[1]));
     // Stage 3 toggles when q[2] rises
  t_ff tff3 (.clk(q[2]), .reset(reset), .t(1'b1), .q(q[3]));
 endmodule
+
