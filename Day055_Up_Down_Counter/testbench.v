@@ -12,8 +12,8 @@ module Up_Down_tb;
 
     initial begin
         clk = 0;
-        reset = 1;     		    // Reset ON
-        upordown = 0;  		    // Down mode
+        reset = 1;     		  // Reset ON
+        upordown = 0;  		  // Down mode
         #25 reset = 0; #100   // Reset OFF
         upordown = 1;  #100   // Up Mode
         upordown = 0;  #100   // Down Mode
@@ -27,3 +27,4 @@ $finish;
         $monitor("T=%0dns  UpOrDown=%b  Count=%d", $time  , upordown, count);
     end
 endmodule
+
