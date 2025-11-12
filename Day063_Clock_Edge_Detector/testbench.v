@@ -1,6 +1,6 @@
 //Testbench:
 `timescale 1ns / 1ps
-module clk_edge_detector_tb;
+module test_bench;
 reg clk, temp_clk;
 wire posedge_detect, negedge_detect, dualedge_detect;
 clk_edge_detector dut( clk,  temp_clk,  posedge_detect, negedge_detect, dualedge_detect );
@@ -17,8 +17,9 @@ end
 
 initial begin
     $dumpfile("waveform.vcd");
-    $dumpvars(0, clk_edge_detector_tb);
+    $dumpvars(0, test_bench);
     $monitor("clock: %b  posedge: %b egedge: %b  dualedge: %b", clk, posedge_detect, negedge_detect, dualedge_detect);
 #30 $finish;
 end
 endmodule
+
