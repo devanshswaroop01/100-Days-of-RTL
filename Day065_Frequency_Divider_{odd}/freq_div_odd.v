@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
-module mod_5_counter
-(input clk,reset, output reg [2:0] counter);
+module mod_5_counter (
+        input clk,reset, output reg [2:0] counter);
         always@(posedge clk) begin
             if(reset)
             counter <= 0;
