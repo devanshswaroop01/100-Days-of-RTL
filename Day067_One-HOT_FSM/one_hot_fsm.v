@@ -29,7 +29,7 @@ always @(posedge clk or posedge reset) begin
     endcase
   end
 
-  // Output logic (combinational)
+  // output logic (combinational)
   always @(*) begin
     case (present_state)
       IDLE:    out = 2'b00;
@@ -37,7 +37,9 @@ always @(posedge clk or posedge reset) begin
       STATE2:  out = 2'b10;
       STATE3:  out = 2'b11;
       default: out = 2'b00;
-    endcase end
+    endcase 
+  end
+  
     always @(*) begin
       state = present_state;
   end
