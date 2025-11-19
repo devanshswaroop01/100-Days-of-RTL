@@ -1,6 +1,6 @@
   input clk,rst,din,
-    output reg y);
-  // State Encoding 
+  output reg y);
+  // state encoding 
   parameter S0 = 3'b000,
             S1 = 3'b001,
             S2 = 3'b010,
@@ -8,7 +8,7 @@
             S4 = 3'b100;
   reg [2:0] cs, nst;
 
-  // State Transition Logic (Sequential)
+// state transition logic (sequential)
   always @(posedge clk, posedge rst) begin
     if (rst)
       cs <= S0;
@@ -16,7 +16,7 @@
       cs <= nst;
   end
 
-  // Next State Logic (Combinational)
+// next state logic (combinational)
   always @(*) begin
     case (cs)
       S0: nst = (din) ? S1 : S0;
@@ -28,15 +28,15 @@
     endcase
   end
 
-  //output logic
+//output logic (combinational)
 always @(cs) begin
-case(cs)
-S0: y<=0;
-S1: y<=0;
-S2: y<=0;
-S3: y<=0;
-S4: y<=1;
-default: y<=0;
-endcase
-end
-endmodule
+  case(cs)
+    S0: y<=0;
+    S1: y<=0;
+    S2: y<=0;
+    S3: y<=0;
+    S4: y<=1;
+    default: y<=0;
+  endcase
+    end
+  endmodule
