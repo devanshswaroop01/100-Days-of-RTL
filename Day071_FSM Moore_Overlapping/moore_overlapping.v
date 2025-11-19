@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+module fsm_1011( 
   input clk,rst,din,
   output reg y);
   // state encoding 
