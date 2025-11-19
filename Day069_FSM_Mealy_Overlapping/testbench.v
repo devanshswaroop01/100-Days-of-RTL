@@ -20,20 +20,21 @@ module fsm_11001_tb;
     #10 din = 1;  
     #10 din = 0;
     #10 din = 0;   
-    #10 din = 1; // <-- detection should trigger here (11001)
+    #10 din = 1; // <-- detection here (11001) y= 1 
     
     #10 din = 1; 
     #10 din = 0; 
     #10 din = 0;
-    #10 din = 1;  // <-- another detection
+    #10 din = 1;  // <-- another detection y= 1
     
     #10 din = 0; 
     #10 din = 1;
     #10 din = 1;
     #10 din = 0; 
     #10 din = 0;
-    #10 din = 1; // <-- another detection
+    #10 din = 1; // <-- another detection y= 1
   #100 $finish;
   end
 
 endmodule
+
