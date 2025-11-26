@@ -24,7 +24,7 @@ module ALU(
 	                 result[0]<=e_bit;           $display("7-Left Rotation operation");   end
 	
 	4'b0111: begin   result<=a>>1; e_bit <=a[0];  
-			             result[7]<=e_bit;           $display("8-Right Rotation operation");  end
+			         result[7]<=e_bit;           $display("8-Right Rotation operation");  end
 	
 	4'b1000 : begin  result <= a&b;              $display("9-AND operation");             end
 	
@@ -43,5 +43,5 @@ module ALU(
 	4'b1111 : begin  result <= ~a + 8'b00000001; $display("16-2's Compliment operation"); end 
 	
 	endcase
-end
-endmodule
+		end
+	  endmodule
