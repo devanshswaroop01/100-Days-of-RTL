@@ -1,13 +1,10 @@
-
 `timescale 1ns / 1ps
-
 module test_bench;
 reg [7:0] a;
 reg [7:0] b;
 reg [3:0] sel;
 wire [7:0] result;
 wire e_bit;
-
 ALU dut(a, b, sel, result, e_bit);
 
 initial begin
@@ -20,6 +17,9 @@ always #20 sel=sel+1;
       
 initial begin
 $monitor("\t Result= %b \n", result);
+$dumpfile("waveform.vcd");
+$dumpvars(0, test_bench);
 #320 $finish;
 end
 endmodule
+
