@@ -44,3 +44,4 @@ initial begin
     $monitor(" r_en = %b  addr = %b  data = %b ", r_en , addr, data);
   end 
 endmodule
+
