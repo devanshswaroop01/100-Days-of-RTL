@@ -1,5 +1,5 @@
-// Code your design here
-module top_module(
+
+module clock_timer(
     input clk,
     input reset,
     input ena,
@@ -63,5 +63,6 @@ module top_module(
         end
     end
 end
+
 
 endmodule
