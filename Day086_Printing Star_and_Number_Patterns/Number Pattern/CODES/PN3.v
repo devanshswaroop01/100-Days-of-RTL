@@ -1,4 +1,3 @@
-// Code your design here
 `timescale 1ns / 1ps
 
 module number_pattern_3;
@@ -16,4 +15,5 @@ initial begin
 	  $display("");
 	end
     end
+
 endmodule
