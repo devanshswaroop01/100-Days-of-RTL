@@ -16,8 +16,7 @@ module top_module(
     input in,
     input reset,    // Synchronous reset
     output reg  [7:0] out_byte,
-    output reg done
-);
+    output reg done);
 
     parameter IDLE = 3'd0,START = 3'd1,DATA = 3'd2;
     parameter STOP = 3'd3,WAIT = 3'd4;
