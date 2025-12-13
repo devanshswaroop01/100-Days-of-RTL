@@ -24,7 +24,7 @@ module top_module(
     reg [2:0] current_state,next_state;
     reg [3:0] counter;
     reg [8:0] data_in;
-    reg odd_temp;
+    wire odd_temp;
     wire Isdone;
 
 
@@ -108,7 +108,9 @@ module top_module(
         end
     end
     // Add parity checking.
-    wire odd_temp1;
-    assign Isdone = (next_state == START);
-    parity u0 (clk ,Isdone,in,odd_temp1);
+    wire parity_enable;
+    assign parity_enable = (current_state == DATA) && (counter < 4'd8);
+    
+    assign Isdone = (current_state == START);
+    parity u0 (.clk (clk), .reset (Isdone), .in (parity_enable ? in : 1'b0), .odd (odd_temp));
 endmodule
