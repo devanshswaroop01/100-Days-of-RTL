@@ -108,9 +108,6 @@ module top_module(
         end
     end
     // Add parity checking.
-    wire parity_enable;
-    assign parity_enable = (current_state == DATA) && (counter < 4'd8);
-    
-    assign Isdone = (current_state == START);
-    parity u0 (.clk (clk), .reset (Isdone), .in (parity_enable ? in : 1'b0), .odd (odd_temp));
+    assign Isdone = (next_state == START);
+    parity u0 (clk ,Isdone,in,odd_temp);
 endmodule
