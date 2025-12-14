@@ -32,7 +32,10 @@ module test_bench;
     end
     
     initial begin
+		$dumpfile("waveform.vcd");
+		$dumpvars(0, test_bench);
         $monitor("time=%g, clk=%b, rst=%b, sense_entry=%b, sense_exit=%b, password_1=%b, password_2=%b,\ngreen_light=%b, red_light=%b, hex_1=%b, hex_2=%b, space_available=%d, space_utilized=%d, count_cars=%d", $time, clk, rst, sense_entry, sense_exit, password_1, password_2, green_light, red_light, hex_1, hex_2, space_available, space_utilized, count_cars);
         #150 $finish;
     end
+
 endmodule
