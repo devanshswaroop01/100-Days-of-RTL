@@ -12,6 +12,8 @@ vend dut(coin, clock, reset, newspaper);
 
 //Display the output
 initial begin
+$dumpfile("waveform.vcd");
+$dumpvars(0, test_bench);
 $display("\t\tTime Reset Newspaper"); 
 $monitor("\t\t %0d \t %0d \t %0d", $time, reset, newspaper);
 end
@@ -47,5 +49,6 @@ initial #1500 $finish;
 
 //setup clock; cycle time = 40 units
 always #20 clock = ~clock;
+
 
 endmodule
