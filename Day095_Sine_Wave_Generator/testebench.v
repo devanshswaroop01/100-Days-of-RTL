@@ -1,5 +1,4 @@
-// Code your testbench here
-// or browse Examples
+
 `timescale 1ns / 1ps
 
 module testbench_sinewave;
@@ -18,4 +17,5 @@ $monitor("o=%d",o);
         #5 t=i;
     end
 end
+
 endmodule
