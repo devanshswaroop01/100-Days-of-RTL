@@ -9,7 +9,6 @@ module spi_state (
     output wire [4:0]  counter );
 
     // Internal registers
-
     reg [15:0] shift_reg;          // Shift register
     reg [4:0]  count;              // Bit counter
     reg        cs_l;
@@ -71,9 +70,7 @@ module spi_state (
                         state <= IDLE;
                     end
                 end
-
                 default: state <= IDLE;
-
             endcase
         end
     end
@@ -83,5 +80,4 @@ module spi_state (
     assign spi_sclk = sclk;
     assign spi_data = mosi;
     assign counter  = count;
-
 endmodule
