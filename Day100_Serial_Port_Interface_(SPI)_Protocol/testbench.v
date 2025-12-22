@@ -30,10 +30,8 @@ module test_bench;
     // OPTIONAL: Bit-level monitor (enable if needed)
     always @(posedge spi_sclk) begin
         if (spi_cs_l == 0)
-            $display("Time=%0t | SCLK↑ | MOSI=%b | BitCount=%0d",
-                      $time, spi_data, counter);
+            $display("Time=%0t | SCLK↑ | MOSI=%b | BitCount=%0d",$time, spi_data, counter);
     end
-
 
     // ---------------- Test Sequence ----------------
     initial begin
@@ -66,6 +64,6 @@ module test_bench;
         $display("All SPI frames completed successfully at time %0t ns", $time);
         $finish;
     end
-
 endmodule
+
 
