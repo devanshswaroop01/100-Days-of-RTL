@@ -164,6 +164,6 @@ git clone https://github.com/devanshswaroop01/100-days-of-RTL.git
 ## 📫 Connect with Me
 
 * **GitHub:** [devanshswaroop01](https://github.com/devanshswaroop01)
-* **LinkedIn:** [Devansh Swaroop](https://www.linkedin.com/in/devanshswaroop01)
+* **LinkedIn:** [Devansh Swaroop](https://www.linkedin.com/in/devansh-swaroop-627633248/)
 
 ---
