@@ -141,7 +141,7 @@ I use tools like **Quartus Prime** and **EDA Playground** for synthesizing, simu
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/devanshswaroop01/100-days-of-RTL.git
+git clone :https://github.com/devanshswaroop01/100-Days-of-RTL.git
 ```
 
 2. Open any day’s folder in **Quartus Prime** or **EDA Playground**.
